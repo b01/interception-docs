@@ -6,4 +6,4 @@ Contents:
 
 .. toctree::
 
-   Kshabazz/Interception/StreamWrappers/index
+   StreamWrappers <Kshabazz/Interception/StreamWrappers/index>
