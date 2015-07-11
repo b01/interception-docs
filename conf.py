@@ -14,14 +14,6 @@
 
 import sys
 import os
-from sphinx.highlighting import lexers
-from pygments.lexers.web import PhpLexer
-
-lexers['php'] = PhpLexer(startinline=True, linenos=1)
-lexers['php-annotations'] = PhpLexer(startinline=True, linenos=1)
-
-# Default domain
-primary_domain = 'php'
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -36,9 +28,12 @@ primary_domain = 'php'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-#extensions = []
 # This doesn't work on ReadTheDocs
+## also add these in a requirements.txt file in the configuration build directory.
 extensions = ['sphinxcontrib.phpdomain']
+
+# Default domain
+primary_domain = 'php'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
